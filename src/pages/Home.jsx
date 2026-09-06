@@ -13,7 +13,7 @@ export default function Home() {
         </h1>
 
         <p className="home-subtitle">
-          Discover amazing products at great prices
+          Discover amazing products at the best prices
         </p>
       </div>
 
