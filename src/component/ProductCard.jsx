@@ -23,7 +23,7 @@ export default function ProductCard({ product }) {
         <div className="product-card-actions">
 
           <Link
-            to={`/product/${product.id}`}
+            to={`/products/${product.id}`}
             className="btn btn-secondary"
           >
             View Details
