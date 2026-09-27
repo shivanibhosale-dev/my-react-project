@@ -6,7 +6,8 @@ export default function Checkout() {
     getCartItemsWithProducts,
     addToCart,
     decreaseQuantity,
-    removeFromCart
+    removeFromCart,
+    clearCart
   } = useCart();
 
   const cartItems = getCartItemsWithProducts();
@@ -151,6 +152,7 @@ export default function Checkout() {
               </span>
 
               <div>
+
                 <strong>
                   {formatUSD(subtotal)}
                 </strong>
@@ -160,6 +162,7 @@ export default function Checkout() {
                 <strong className="price-inr">
                   {formatINR(subtotal)}
                 </strong>
+
               </div>
 
             </div>
@@ -171,6 +174,7 @@ export default function Checkout() {
               </span>
 
               <div>
+
                 <strong>
                   {formatUSD(total)}
                 </strong>
@@ -180,11 +184,18 @@ export default function Checkout() {
                 <strong className="price-inr">
                   {formatINR(total)}
                 </strong>
+
               </div>
 
             </div>
 
-            <button className="place-order-button">
+            <button
+              className="place-order-button"
+              onClick={() => {
+                alert("Successful Order!");
+                clearCart();
+              }}
+            >
               Place Order
             </button>
 

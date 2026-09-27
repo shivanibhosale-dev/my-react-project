@@ -63,6 +63,10 @@ export default function CartProvider({ children }) {
         setCartItems(updatedCartItems);
     }
 
+    function clearCart() {
+        setCartItems([]);
+    }
+
     function getCartItemsWithProducts() {
 
         return cartItems
@@ -80,6 +84,7 @@ export default function CartProvider({ children }) {
                 addToCart,
                 decreaseQuantity,
                 removeFromCart,
+                clearCart,
                 getCartItemsWithProducts
             }}
         >
